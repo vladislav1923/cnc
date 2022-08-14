@@ -5,7 +5,7 @@ import * as CurrencyActions from '../actions/currency.actions';
 import {CurrencyService} from "../../services/currency.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import { of } from 'rxjs';
-import {CurrencyResponseInterface} from "../../interfaces";
+import {CurrencyResponseDto} from "../../dto";
 
 
 @Injectable()
@@ -15,7 +15,7 @@ export class CurrencyEffects {
       ofType(CurrencyActions.fetchCurrencies),
       switchMap(() => {
         return this.currencyService.fetchCurrencies().pipe(
-          map((response: CurrencyResponseInterface) => {
+          map((response: CurrencyResponseDto) => {
             return CurrencyActions.fetchCurrenciesSucceed({ response });
           }),
           catchError((error: HttpErrorResponse) => {

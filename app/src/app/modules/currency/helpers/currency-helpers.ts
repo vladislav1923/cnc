@@ -1,10 +1,16 @@
-import {CurrencyItemInterface, CurrencyListInterface, CurrencyResponseInterface} from "../interfaces";
+import {CurrencyItemInterface} from "../interfaces";
+import {CurrencyResponseDto} from "../dto";
 
-const prepareCurrencies = (response: CurrencyResponseInterface): CurrencyItemInterface[] => {
+const prepareCurrencies = (response: CurrencyResponseDto): CurrencyItemInterface[] => {
   const result: CurrencyItemInterface[] = [];
 
   for (const item in response.Valute) {
-    result.push(response.Valute[item]);
+    const normalizedItem: CurrencyItemInterface = {
+      id: response.Valute[item].ID,
+      name: response.Valute[item].Name,
+      value: response.Valute[item].Value,
+    };
+    result.push(normalizedItem);
   }
 
   return result;

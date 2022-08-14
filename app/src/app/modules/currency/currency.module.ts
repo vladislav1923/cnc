@@ -10,6 +10,8 @@ import {CURRENCY_STORE_KEY} from "./contants";
 import {CurrencyFacade} from "./+state/facade/currency.facade";
 import {CurrencyService} from "./services/currency.service";
 import {HttpClientModule} from "@angular/common/http";
+import {CurrencyTableComponent} from "./components/currency-table/currency-table.component";
+import {RublesPipe} from "./pipes/rubles/rubles.pipe";
 
 @NgModule({
   imports: [
@@ -21,6 +23,8 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   declarations: [
     CurrencyComponent,
+    CurrencyTableComponent,
+    RublesPipe,
   ],
   providers: [
     CurrencyFacade,

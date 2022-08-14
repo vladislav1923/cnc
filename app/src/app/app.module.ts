@@ -12,7 +12,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from "../environments/environment";
 
-
 @NgModule({
   declarations: [
     AppComponent,

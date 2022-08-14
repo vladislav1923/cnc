@@ -1,6 +1,6 @@
 import {createAction, props} from "@ngrx/store";
 import {HttpErrorResponse} from "@angular/common/http";
-import {CurrencyResponseInterface} from "../../interfaces";
+import {CurrencyResponseDto} from "../../dto";
 
 export const fetchCurrencies = createAction(
   '[Currency] Fetch Currencies',
@@ -8,7 +8,7 @@ export const fetchCurrencies = createAction(
 
 export const fetchCurrenciesSucceed = createAction(
   '[Currency] Fetch Currencies Succeed',
-  props<{ response: CurrencyResponseInterface }>(),
+  props<{ response: CurrencyResponseDto }>(),
 );
 
 export const fetchCurrenciesFailed = createAction(
