@@ -9,6 +9,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CurrencyComponent } from './components/currency/currency.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
     SidebarComponent,
     CurrencyComponent,
     CalculatorComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
