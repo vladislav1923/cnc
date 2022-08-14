@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/reset-css/sass/_reset.scss";
+
+@font-face {
+  font-family: 'RegularFont';
+  src: url('assets/fonts/ubuntu-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MediumFont';
+  src: url('assets/fonts/ubuntu-medium.ttf') format('truetype');
+}
+
+$regularFont: 'RegularFont', sans-serif;
+$mediumFont: 'MediumFont', sans-serif;
+
+@mixin h1Text {
+  font-family: $mediumFont;
+  font-size: 32px;
+}
+
+@mixin h2Text {
+  font-family: $mediumFont;
+  font-size: 24px;
+}
+
+@mixin regularText {
+  font-family: $regularFont;
+  font-size: 16px;
+}
+
+@mixin mediumText {
+  font-family: $mediumFont;
+  font-size: 16px;
+}
+
+$white: #ffffff;
+$lightGray: #ebedf3;
+$darkBlue: #6699cc;

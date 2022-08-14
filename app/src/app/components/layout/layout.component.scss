@@ -1,0 +1,17 @@
+@import "src/styles";
+
+.layout {
+  display: flex;
+  background-color: $lightGray;
+  min-height: 100vh;
+}
+
+.layout__sidebar {
+  height: 100vh;
+  background-color: $darkBlue;
+  margin-right: 32px;
+}
+
+.layout__main {
+  flex-grow: 1;
+}
