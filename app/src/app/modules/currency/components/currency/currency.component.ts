@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CurrencyFacade} from "../../+state/facade/currency.facade";
 
 @Component({
   selector: 'app-currency',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private currencyFacade: CurrencyFacade) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+     this.currencyFacade.fetchCurrencies();
   }
-
 }

@@ -7,9 +7,10 @@ import { StoreModule } from '@ngrx/store';
 import { extModules } from '../build-specifics';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { CurrencyComponent } from './components/currency/currency.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { EffectsModule } from '@ngrx/effects';
+import { environment } from "../environments/environment";
 
 
 @NgModule({
@@ -17,14 +18,23 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     LayoutComponent,
     SidebarComponent,
-    CurrencyComponent,
     CalculatorComponent,
     FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(
+      {},
+      {
+        metaReducers: !environment.production ? [] : [],
+        runtimeChecks: {
+          strictActionImmutability: true,
+          strictStateImmutability: true,
+        },
+      }
+    ),
+    EffectsModule.forRoot([]),
     extModules,
   ],
   providers: [],
