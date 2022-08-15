@@ -3,13 +3,29 @@
     <tr class="currency-table__head-row">
       <th class="currency-table__cell">Name</th>
       <th class="currency-table__cell">Value</th>
+      <th class="currency-table__cell">Sum</th>
     </tr>
   </thead>
   <tbody class="currency-table__body">
+    <tr class="currency-table__calculator-row">
+      <td class="currency-table__cell" colspan="2">
+        Enter rubles to calculate the value of each currency
+      </td>
+      <td class="currency-table__cell">
+        <app-input
+          [type]="'number'"
+          [value]="inputValue"
+          [min]="0"
+          [placeholder]="'Enter value'"
+          (changeEvent)="onValueChange($event)">
+        </app-input>
+      </td>
+    </tr>
     <ng-container *ngFor="let item of currencies">
       <tr class="currency-table__body-row">
         <td class="currency-table__cell">{{item.name}}</td>
-        <td class="currency-table__cell">{{item.value | rubles}}</td>
+        <td class="currency-table__cell">{{item.value | currencyRate: 'rub' }}</td>
+        <td class="currency-table__cell">{{value / item.value | currencyRate: item.char}}</td>
       </tr>
     </ng-container>
   </tbody>

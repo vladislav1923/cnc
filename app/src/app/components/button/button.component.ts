@@ -16,7 +16,7 @@ export class ButtonComponent {
   public loadingText = 'Loading...';
 
   @Output()
-  public clickEvent = new EventEmitter();
+  public clickEvent = new EventEmitter<void>();
 
   public onClick(e: Event): void {
     e.preventDefault();

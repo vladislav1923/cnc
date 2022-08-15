@@ -8,7 +8,8 @@ const prepareCurrencies = (response: CurrencyResponseDto): CurrencyItemInterface
     const normalizedItem: CurrencyItemInterface = {
       id: response.Valute[item].ID,
       name: response.Valute[item].Name,
-      value: response.Valute[item].Value,
+      value: Number(response.Valute[item].Value),
+      char: response.Valute[item].CharCode,
     };
     result.push(normalizedItem);
   }

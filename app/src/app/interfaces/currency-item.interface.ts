@@ -1,5 +1,6 @@
 export interface CurrencyItemInterface {
   id: string;
   name: string;
-  value: string;
+  value: number;
+  char: string;
 }

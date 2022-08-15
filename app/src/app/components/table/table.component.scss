@@ -17,6 +17,10 @@
   padding: 12px 15px;
 }
 
+.currency-table__calculator-row {
+  background-color: $white;
+}
+
 .currency-table__body-row {
   &:nth-of-type(odd) {
     background-color: $white;

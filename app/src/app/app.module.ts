@@ -12,7 +12,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { environment } from "../environments/environment";
 import {TableComponent} from "./components/table/table.component";
 import {CurrencyComponent} from "./components/currency/currency.component";
-import {RublesPipe} from "./pipes/rubles/rubles.pipe";
 import {AppFacade} from "./+state/facade/app.facade";
 import {STORE_KEY} from "./constants";
 import {appReducer} from "./+state/reducers/app.reducer";
@@ -20,6 +19,8 @@ import {AppEffects} from "./+state/effects/app.effects";
 import {CurrencyService} from "./services/currency.service";
 import {HttpClientModule} from "@angular/common/http";
 import { ButtonComponent } from './components/button/button.component';
+import { InputComponent } from './components/input/input.component';
+import {CurrencyRatePipe} from "./pipes/currency-rate/currency-rate.pipe";
 
 @NgModule({
   declarations: [
@@ -29,8 +30,9 @@ import { ButtonComponent } from './components/button/button.component';
     TableComponent,
     FooterComponent,
     CurrencyComponent,
-    RublesPipe,
+    CurrencyRatePipe,
     ButtonComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
