@@ -19,4 +19,8 @@ export const appReducer = createReducer(
     scene: SceneEnum.Content,
     currencies: prepareCurrencies(response),
   })),
+  on(AppActions.fetchCurrenciesFailed, (state) => ({
+    ...state,
+    scene: SceneEnum.Error,
+  })),
 );

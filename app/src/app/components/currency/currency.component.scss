@@ -13,3 +13,8 @@
   @include regularText;
   color: $darkBlue;
 }
+
+.currency__error {
+  @include regularText;
+  color: $red;
+}
