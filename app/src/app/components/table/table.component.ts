@@ -14,6 +14,10 @@ export class TableComponent {
   public inputValue = '';
   public value = 0;
 
+  public trackByHandler(index: number, item: CurrencyItemInterface): string {
+    return item.id;
+  }
+
   public onValueChange(value: string): void {
     const numericValue = Number(value);
     if (Number.isNaN(numericValue) || numericValue < 0) {

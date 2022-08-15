@@ -21,7 +21,7 @@
         </app-input>
       </td>
     </tr>
-    <ng-container *ngFor="let item of currencies">
+    <ng-container *ngFor="let item of currencies; trackBy: trackByHandler">
       <tr class="currency-table__body-row">
         <td class="currency-table__cell">{{item.name}}</td>
         <td class="currency-table__cell">{{item.value | currencyRate: 'rub' }}</td>
