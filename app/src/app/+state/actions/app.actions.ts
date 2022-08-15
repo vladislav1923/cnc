@@ -6,6 +6,10 @@ export const fetchCurrencies = createAction(
   '[App] Fetch Currencies',
 );
 
+export const updateCurrencies = createAction(
+  '[App] Update Currencies',
+);
+
 export const fetchCurrenciesSucceed = createAction(
   '[App] Fetch Currencies Succeed',
   props<{ response: CurrencyResponseDto }>(),

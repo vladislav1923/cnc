@@ -11,7 +11,7 @@ import {CurrencyResponseDto} from "../../dto";
 export class AppEffects {
   public fetchCurrencies$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(AppActions.fetchCurrencies),
+      ofType(AppActions.fetchCurrencies, AppActions.updateCurrencies),
       switchMap(() => {
         return this.currencyService.fetchCurrencies().pipe(
           delay(1000),

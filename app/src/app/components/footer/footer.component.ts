@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import { GITHUB_REPO_URL } from "../../contants";
+import { GITHUB_REPO_URL } from "../../constants";
 
 @Component({
   selector: 'app-footer',

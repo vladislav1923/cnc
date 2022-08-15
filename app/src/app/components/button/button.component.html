@@ -1,0 +1,6 @@
+<button class="button" [class.button_disabled]="isLoading" (click)="onClick($event)">
+  <ng-container *ngIf="!isLoading else loadingTpl">
+    <ng-content></ng-content>
+  </ng-container>
+  <ng-template #loadingTpl>{{loadingText}}</ng-template>
+</button>

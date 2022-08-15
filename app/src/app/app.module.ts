@@ -14,11 +14,12 @@ import {TableComponent} from "./components/table/table.component";
 import {CurrencyComponent} from "./components/currency/currency.component";
 import {RublesPipe} from "./pipes/rubles/rubles.pipe";
 import {AppFacade} from "./+state/facade/app.facade";
-import {STORE_KEY} from "./contants";
+import {STORE_KEY} from "./constants";
 import {appReducer} from "./+state/reducers/app.reducer";
 import {AppEffects} from "./+state/effects/app.effects";
 import {CurrencyService} from "./services/currency.service";
 import {HttpClientModule} from "@angular/common/http";
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {HttpClientModule} from "@angular/common/http";
     FooterComponent,
     CurrencyComponent,
     RublesPipe,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

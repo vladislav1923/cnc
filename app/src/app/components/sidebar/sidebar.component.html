@@ -1,3 +1,17 @@
-<nav class="sidebar">
-  <h1 class="sidebar__title">Currencies and Calculator</h1>
-</nav>
+<ng-container *ngIf="{
+  scene: scene$ | async
+} as params">
+  <nav class="sidebar">
+    <h1 class="sidebar__title">Currencies <br/> and <br/> Calculator</h1>
+    <ng-container *ngIf="params.scene === scene.Updating || params.scene === scene.Content">
+      <div class="sidebar__update-button">
+        <app-button
+          [isLoading]="params.scene === scene.Updating"
+          [loadingText]="'Updating...'"
+          (clickEvent)="onUpdate()">
+          Update currencies
+        </app-button>
+      </div>
+    </ng-container>
+  </nav>
+</ng-container>

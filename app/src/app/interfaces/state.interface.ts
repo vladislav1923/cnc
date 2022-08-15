@@ -1,4 +1,4 @@
-import {SceneEnum} from "../enums/scene.enum";
+import {SceneEnum} from "../enums";
 import {CurrencyItemInterface} from "./currency-item.interface";
 
 export interface StateInterface {

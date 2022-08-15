@@ -13,4 +13,8 @@ export class AppFacade {
   public fetchCurrencies(): void {
     this.store.dispatch(AppActions.fetchCurrencies());
   }
+
+  public updateCurrencies(): void {
+    this.store.dispatch(AppActions.updateCurrencies());
+  }
 }

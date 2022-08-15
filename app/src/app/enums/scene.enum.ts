@@ -1,6 +1,6 @@
 export enum SceneEnum {
-  Init,
-  Content,
-  Updating,
-  Error,
+  Init = 'Init',
+  Content = 'Content',
+  Updating = 'Updating',
+  Error = 'Error',
 }
