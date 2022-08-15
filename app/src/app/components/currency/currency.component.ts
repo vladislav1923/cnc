@@ -9,7 +9,7 @@ import { map } from "rxjs/operators";
   selector: 'app-currency',
   templateUrl: './currency.component.html',
   styleUrls: ['./currency.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CurrencyComponent implements OnInit, OnDestroy {
   public currencies$: Observable<CurrencyItemInterface[]> = this.appFacade.currencies$;
