@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {API_URL} from "../constants";
-import {CurrencyResponseDto} from "../dto";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { API_URL } from "../constants";
+import { CurrencyResponseDto } from "../dto";
 
 @Injectable()
 export class CurrencyService {

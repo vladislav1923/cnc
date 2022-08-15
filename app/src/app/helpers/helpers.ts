@@ -1,5 +1,5 @@
-import {CurrencyItemInterface} from "../interfaces";
-import {CurrencyResponseDto} from "../dto";
+import { CurrencyItemInterface } from "../interfaces";
+import { CurrencyResponseDto } from "../dto";
 
 const prepareCurrencies = (response: CurrencyResponseDto): CurrencyItemInterface[] => {
   const result: CurrencyItemInterface[] = [];

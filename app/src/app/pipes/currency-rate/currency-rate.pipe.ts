@@ -1,7 +1,7 @@
-import {Pipe} from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({ name: 'currencyRate' })
-export class CurrencyRatePipe {
+export class CurrencyRatePipe implements PipeTransform {
   public transform(value: number, char: string) {
     return new Intl.NumberFormat('ru-RU', {
       style: 'currency',

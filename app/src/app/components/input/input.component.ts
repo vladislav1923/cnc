@@ -1,11 +1,22 @@
-import {Component, EventEmitter, Input, Output, OnInit, ViewChild, ElementRef, OnDestroy} from '@angular/core';
-import {debounceTime, fromEvent, Subscription, tap} from "rxjs";
-import {map} from "rxjs/operators";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import { debounceTime, fromEvent, Subscription } from "rxjs";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent implements OnInit, OnDestroy {
   @ViewChild('input', { static: true })

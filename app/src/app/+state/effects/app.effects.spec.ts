@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Observable } from 'rxjs';
 
-import { AppEffects } from './currency.effects';
+import { AppEffects } from './app.effects';
 
 describe('CurrencyEffects', () => {
   let actions$: Observable<any>;
@@ -12,8 +12,8 @@ describe('CurrencyEffects', () => {
     TestBed.configureTestingModule({
       providers: [
         AppEffects,
-        provideMockActions(() => actions$)
-      ]
+        provideMockActions(() => actions$),
+      ],
     });
 
     effects = TestBed.inject(AppEffects);

@@ -1,6 +1,6 @@
-import {createFeatureSelector, createSelector} from "@ngrx/store";
-import {STORE_KEY} from "../../constants";
-import {StateInterface} from "../../interfaces";
+import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { STORE_KEY } from "../../constants";
+import { StateInterface } from "../../interfaces";
 
 export const getCartState = createFeatureSelector<StateInterface>(STORE_KEY);
 

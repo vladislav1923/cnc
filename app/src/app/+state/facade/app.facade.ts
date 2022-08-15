@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {select, Store} from "@ngrx/store";
+import { Injectable } from "@angular/core";
+import { select, Store } from "@ngrx/store";
 import * as AppActions from '../actions/app.actions';
 import * as AppSelectors from '../selectors/app.selectors';
 

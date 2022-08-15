@@ -1,6 +1,6 @@
-import {createAction, props} from "@ngrx/store";
-import {HttpErrorResponse} from "@angular/common/http";
-import {CurrencyResponseDto} from "../../dto";
+import { createAction, props } from "@ngrx/store";
+import { HttpErrorResponse } from "@angular/common/http";
+import { CurrencyResponseDto } from "../../dto";
 
 export const fetchCurrencies = createAction(
   '[App] Fetch Currencies',

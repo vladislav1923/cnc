@@ -1,2 +1,2 @@
-export {StateInterface} from './state.interface';
-export {CurrencyItemInterface} from './currency-item.interface';
+export { StateInterface } from './state.interface';
+export { CurrencyItemInterface } from './currency-item.interface';

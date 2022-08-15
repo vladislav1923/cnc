@@ -1,8 +1,8 @@
 import { createReducer, on } from "@ngrx/store";
 import * as AppActions from '../actions/app.actions';
-import {INITIAL_STATE} from "../../constants";
-import {prepareCurrencies} from "../../helpers/helpers";
-import {SceneEnum} from "../../enums";
+import { INITIAL_STATE } from "../../constants";
+import { prepareCurrencies } from "../../helpers/helpers";
+import { SceneEnum } from "../../enums";
 
 export const appReducer = createReducer(
   INITIAL_STATE,

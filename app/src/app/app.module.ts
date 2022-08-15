@@ -10,17 +10,17 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from "../environments/environment";
-import {TableComponent} from "./components/table/table.component";
-import {CurrencyComponent} from "./components/currency/currency.component";
-import {AppFacade} from "./+state/facade/app.facade";
-import {STORE_KEY} from "./constants";
-import {appReducer} from "./+state/reducers/app.reducer";
-import {AppEffects} from "./+state/effects/app.effects";
-import {CurrencyService} from "./services/currency.service";
-import {HttpClientModule} from "@angular/common/http";
+import { TableComponent } from "./components/table/table.component";
+import { CurrencyComponent } from "./components/currency/currency.component";
+import { AppFacade } from "./+state/facade/app.facade";
+import { STORE_KEY } from "./constants";
+import { appReducer } from "./+state/reducers/app.reducer";
+import { AppEffects } from "./+state/effects/app.effects";
+import { CurrencyService } from "./services/currency.service";
+import { HttpClientModule } from "@angular/common/http";
 import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
-import {CurrencyRatePipe} from "./pipes/currency-rate/currency-rate.pipe";
+import { CurrencyRatePipe } from "./pipes/currency-rate/currency-rate.pipe";
 
 @NgModule({
   declarations: [
@@ -46,12 +46,12 @@ import {CurrencyRatePipe} from "./pipes/currency-rate/currency-rate.pipe";
           strictActionImmutability: true,
           strictStateImmutability: true,
         },
-      }
+      },
     ),
     EffectsModule.forRoot([AppEffects]),
     extModules,
   ],
   providers: [AppFacade, CurrencyService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

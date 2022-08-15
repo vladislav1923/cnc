@@ -1,5 +1,5 @@
-import {StateInterface} from "../interfaces";
-import {SceneEnum} from "../enums";
+import { StateInterface } from "../interfaces";
+import { SceneEnum } from "../enums";
 
 export const INITIAL_STATE: StateInterface = {
   currencies: [],

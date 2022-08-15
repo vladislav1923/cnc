@@ -1,15 +1,15 @@
-import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
-import {AppFacade} from "../../+state/facade/app.facade";
-import {interval, Observable, Subscription} from "rxjs";
-import {CurrencyItemInterface} from "../../interfaces";
-import {SceneEnum} from "../../enums";
-import {map} from "rxjs/operators";
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { AppFacade } from "../../+state/facade/app.facade";
+import { interval, Observable, Subscription } from "rxjs";
+import { CurrencyItemInterface } from "../../interfaces";
+import { SceneEnum } from "../../enums";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-currency',
   templateUrl: './currency.component.html',
   styleUrls: ['./currency.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CurrencyComponent implements OnInit, OnDestroy {
   public currencies$: Observable<CurrencyItemInterface[]> = this.appFacade.currencies$;
