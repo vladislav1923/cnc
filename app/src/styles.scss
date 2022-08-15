@@ -34,6 +34,14 @@ $mediumFont: 'MediumFont', sans-serif;
   font-size: 16px;
 }
 
+@mixin tabletMedia {
+  @media (max-width: 756px) { @content; }
+}
+
 $white: #ffffff;
 $lightGray: #ebedf3;
 $darkBlue: #6699cc;
+
+* {
+  box-sizing: border-box;
+}

@@ -3,6 +3,13 @@
 .sidebar {
   width: 240px;
   padding: 32px;
+
+  @include tabletMedia {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+  }
 }
 
 .sidebar__title {

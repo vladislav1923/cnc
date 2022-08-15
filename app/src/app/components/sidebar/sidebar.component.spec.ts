@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarComponent } from './sidebar.component';
+import { ButtonComponent } from "../button/button.component";
+import { AppFacade } from "../../+state/facade/app.facade";
+import { MockComponents, MockProviders } from "ng-mocks";
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -8,7 +11,8 @@ describe('SidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ],
+      declarations: [ SidebarComponent, MockComponents(ButtonComponent) ],
+      providers: [ MockProviders(AppFacade) ],
     })
     .compileComponents();
 
