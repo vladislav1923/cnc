@@ -1,0 +1,17 @@
+<ng-container *ngIf="{
+  scene: scene$ | async,
+  currencies: currencies$ | async
+} as params">
+  <div class="currency">
+    <div class="currency__content">
+      <ng-container *ngIf="params.scene === scene.Init">
+        <p class="currency__loading">Loading...</p>
+      </ng-container>
+      <ng-container *ngIf="params.scene === scene.Content">
+        <div class="currency__table">
+          <app-table [currencies]="params.currencies"></app-table>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

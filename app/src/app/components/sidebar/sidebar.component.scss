@@ -5,21 +5,8 @@
   padding: 32px;
 }
 
-.sidebar__links {
-  list-style: none;
-}
-
-.sidebar__item {
-  margin-bottom: 20px;
-}
-
-.sidebar__link {
-  @include regularText;
+.sidebar__title {
+  @include h1Text;
   color: $white;
-  text-decoration: none;
-
-  &_active {
-    @include mediumText;
-    text-decoration: underline;
-  }
+  margin-bottom: 32px;
 }

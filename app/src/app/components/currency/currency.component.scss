@@ -1,0 +1,15 @@
+@import "../../../styles";
+
+.currency {
+  display: flex;
+}
+
+.currency__content {
+  padding: 32px;
+  flex-grow: 1;
+}
+
+.currency__loading {
+  @include regularText;
+  color: $darkBlue;
+}

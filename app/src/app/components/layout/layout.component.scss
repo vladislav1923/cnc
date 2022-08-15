@@ -6,10 +6,8 @@
 }
 
 .layout__sidebar {
-  position: relative;
   min-height: 100vh;
   background-color: $darkBlue;
-  margin-right: 32px;
 }
 
 .layout__sidebar-sticky {
@@ -18,8 +16,12 @@
 }
 
 .layout__main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   flex-grow: 1;
+  min-height: 100vh;
+}
+
+.layout__footer {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
 }

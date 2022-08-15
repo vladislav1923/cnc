@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-import { SIDEBAR_LINKS } from "../../contants/sidebar-links";
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SidebarComponent {
-  public links = SIDEBAR_LINKS;
-}
+export class SidebarComponent {}
