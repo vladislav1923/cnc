@@ -14,3 +14,6 @@ Data has been got from russian central bank's API
 
 ### Run linter
 `make lint`
+
+### Run tests
+`make test`
