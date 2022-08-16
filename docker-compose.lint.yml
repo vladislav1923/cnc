@@ -4,8 +4,9 @@ services:
     build:
       context: app
       dockerfile: ../Dockerfile.dev
-    command: bash -c 'npm ci; npm run lint'
+    command: bash -c 'npm run lint'
     ports:
       - "3000:3000"
     volumes:
       - "./app:/app"
+      - "/app/node_modules"

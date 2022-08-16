@@ -10,6 +10,6 @@ jobs:
       - name: Run linter
         run: make lint
 
-      - name: Run linter
+      - name: Run tests
         run: make test
-        
+
